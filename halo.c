@@ -48,6 +48,8 @@ int main(void)
     uint64_t physaddr = 0x1000;
     uint64_t userspace_addr;
 
+    region.flags = 0;
+
     for (userspace_addr = (uint64_t)_binary_memdata_bios_bin_start;
 	 userspace_addr < (uint64_t)_binary_memdata_bios_bin_end;
 	 slot += 1, physaddr += 4096, userspace_addr += 4096) {
